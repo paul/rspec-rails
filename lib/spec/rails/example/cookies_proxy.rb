@@ -1,4 +1,4 @@
-require 'action_controller/cookies'
+require 'action_controller/metal/cookies'
 
 module Spec
   module Rails

@@ -1,4 +1,4 @@
-require 'action_controller/test_case'
+require 'action_controller/testing/test_case'
 
 module Spec
   module Rails

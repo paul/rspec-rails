@@ -5,8 +5,8 @@ rescue MissingSourceFile
 end
 require 'rack/utils'
 
-require 'action_controller/test_process'
-require 'action_controller/integration'
+require 'action_controller/testing/process'
+require 'action_dispatch/testing/integration'
 require 'active_support/test_case'
 require 'active_record/fixtures' if defined?(ActiveRecord::Base)
 

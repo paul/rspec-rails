@@ -4,7 +4,7 @@ module Spec
 
       class RedirectTo  #:nodoc:
 
-        include ActionController::StatusCodes
+        include ActionDispatch::StatusCodes
 
         def initialize(request, expected)
           @expected = expected
