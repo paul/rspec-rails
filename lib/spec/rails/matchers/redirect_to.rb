@@ -4,7 +4,7 @@ module Spec
 
       class RedirectTo  #:nodoc:
 
-        include ActionController::StatusCodes
+        include ActionDispatch::StatusCodes
 
         def initialize(request, expected)
           @expected = expected
@@ -66,7 +66,7 @@ module Spec
           @expected_status = interpret_status(options[:status])
           self
         end
-        
+
        def expected_url
           case @expected
             when Hash

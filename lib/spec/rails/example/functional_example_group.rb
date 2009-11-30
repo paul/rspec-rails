@@ -1,4 +1,4 @@
-require 'action_controller/test_case'
+require 'action_controller/testing/test_case'
 
 module Spec
   module Rails
@@ -19,7 +19,7 @@ module Spec
         #   params[:name] = "David"
         #   render
         #   response.should have_tag("div.name","David")
-        #    
+        #
         #   # in a helper spec
         #   params[:first_name] = "David"
         #   params[:last_name] = "Chelimsky"
@@ -43,7 +43,7 @@ module Spec
         def session
           request.session
         end
-        
+
         # Overrides the <tt>cookies()</tt> method in
         # ActionController::TestResponseBehaviour, returning a proxy that
         # accesses the requests cookies when setting a cookie and the
@@ -71,7 +71,7 @@ module Spec
         def cookies
           @cookies ||= Spec::Rails::Example::CookiesProxy.new(self)
         end
-        
+
         alias_method :orig_assigns, :assigns
 
         # :call-seq:
